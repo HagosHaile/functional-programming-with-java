@@ -30,15 +30,19 @@ public class PrintNumbers {
 
 	
 	private static void printOddNumbers(List<Integer> numbers) {
-		numbers.stream().filter(num -> num % 2 == 1).forEach(System.out::println);
+		numbers.stream()
+				.filter(num -> num % 2 == 1)
+				.forEach(System.out::println);
 
 	}
 
 	private static void printSquareOfEvenNumbers(List<Integer> numbers) {
 
 		System.out.println("Print square of only Even numbers ");
-		numbers.stream().filter(number -> number % 2 == 0) // Lamdba Expression
-				.map(num -> num * num).forEach(System.out::println);
+		numbers.stream()
+				.filter(number -> number % 2 == 0) // Lamdba Expression
+				.map(num -> num * num)
+				.forEach(System.out::println);
 	}
 
 	private static void printCubeOfOddNumbers(List<Integer> numbers) {
