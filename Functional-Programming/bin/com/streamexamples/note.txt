@@ -1,0 +1,14 @@
+intermediate operations
+	use streams as an input and returns a stream
+		-distinct
+		-sorted
+		-filter
+		-map
+		
+		
+Terminal operations
+	returns specific type
+		-forEach
+		-collect
+		-reduce
+	

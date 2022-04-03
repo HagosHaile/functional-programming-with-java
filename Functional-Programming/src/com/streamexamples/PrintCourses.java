@@ -1,6 +1,8 @@
 package com.streamexamples;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PrintCourses {
 
@@ -8,7 +10,10 @@ public class PrintCourses {
 		List<String> courses = List.of("Spring", "Spring Boot", "API" , "Microservices", "AWS", "PCF","Azure", "Docker", "Kubernetes");
 		//printAllCourses(courses);
 		//printCoursesContainingSpring(courses);
-		printCoursesWithMoreThanFourChars(courses);
+		//printCoursesWithMoreThanFourChars(courses);
+		//printCoursesInOrderOfLength(courses);
+		List<String> coursesLength = printLengthOfCoursesList(courses);
+		System.out.println(coursesLength);
 
 	}
 
@@ -36,5 +41,34 @@ public class PrintCourses {
 				.filter(course->course.length()>=4)
 				.forEach(System.out::println);
 	}
+	
+	private static void printLengthOfCourses(List<String> courses) {
+		System.out.println("Print Length of Courses");
+		courses.stream()
+				.map(course->course + ": "+course.length())
+				.forEach(System.out::println);
+	}
+	
+	private static void printCoursesInOrder(List<String> courses) {
+		System.out.println("Courses printed in alphabetical order");
+		courses.stream()
+				.sorted()
+				.forEach(System.out::println);
+	}
+	
+	private static void printCoursesInOrderOfLength(List<String> courses) {
+		System.out.println("Courses printed in the order of thier length");
+		courses.stream()
+				.sorted(Comparator.comparing(str->str.length()))
+				.forEach(System.out::println);
+	}
+	
+	private static List<String> printLengthOfCoursesList(List<String> courses) {
+		System.out.println("Print Length of Courses");
+		return courses.stream()
+				.map(course->course + ": "+course.length())
+				.collect(Collectors.toList());
+	}
+
 
 }
