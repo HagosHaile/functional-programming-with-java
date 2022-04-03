@@ -9,18 +9,10 @@ public class PrintNumbers {
 		//printEvenNumbers(numbers);
 		printOddNumbers(numbers);
 	}
-	
-	//	public static void printEachValue(int number) {
-	//		System.out.println(number);
-	//	}
-	
-	//	private static boolean isEven(int num) {
-	//		return num%2==0;
-	//	}
+
 
 	private static void printAllNumbers(List<Integer> numbers) {
-		
-		//numbers.stream().forEach(PrintNumbers::printEachValue);
+	
 		System.out.println("Print all numbers ");
 		numbers.stream()
 			.forEach(System.out::println);
