@@ -10,7 +10,7 @@ public class PrintNumbers {
 		// printEvenNumbers(numbers);
 		// printOddNumbers(numbers);
 		//printSquareOfEvenNumbers(numbers);
-		printSquareOfOddNumbers(numbers);
+		printCubeOfOddNumbers(numbers);
 	}
 
 	private static void printAllNumbers(List<Integer> numbers) {
@@ -28,7 +28,7 @@ public class PrintNumbers {
 				.forEach(System.out::println);
 	}
 
-	// Exercise 1
+	
 	private static void printOddNumbers(List<Integer> numbers) {
 		numbers.stream().filter(num -> num % 2 == 1).forEach(System.out::println);
 
@@ -41,7 +41,7 @@ public class PrintNumbers {
 				.map(num -> num * num).forEach(System.out::println);
 	}
 
-	private static void printSquareOfOddNumbers(List<Integer> numbers) {
+	private static void printCubeOfOddNumbers(List<Integer> numbers) {
 
 		System.out.println("Print cube of only Odd numbers ");
 		numbers.stream()
