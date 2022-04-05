@@ -4,6 +4,7 @@ import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 
+//BiPredicate, BiFunction, BiConsumer exercises
 public class BiFunctionalInterfaces {
 
 	public static void main(String[] args) {
